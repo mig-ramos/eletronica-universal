@@ -4,10 +4,12 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7d08fa7bafe2271e35948f26b13e3157a8d8664f302c1688c81f9054f9765466
+-- hash: d6cda8338a9486742f03d1c009ad087318dcc1e83c2b376fc7c35e63c2321832
 
 name:           aulahaskell
 version:        0.0.0
+license:        MIT
+license-file:   LICENSE
 build-type:     Simple
 
 flag dev

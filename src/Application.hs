@@ -21,7 +21,8 @@ import Control.Monad.Logger                 (liftLoc, runLoggingT)
 import Database.Persist.Postgresql          (createPostgresqlPool, pgConnStr,
                                              pgPoolSize, runSqlPool)
 import Import
-import Language.Haskell.TH.Syntax           (qLocation)
+import Language.Haskell.TH.Syntax
+import Network.Wai.Handler.WarpTLS           (qLocation)
 import Network.Wai (Middleware)
 import Network.Wai.Handler.Warp             (Settings, defaultSettings,
                                              defaultShouldDisplayException,
@@ -141,22 +142,16 @@ develMain = develMainHelper getApplicationDev
 -- | The @main@ function for an executable running this site.
 appMain :: IO ()
 appMain = do
-    -- Get the settings from all relevant sources
+    let cp s = "/etc/letsencrypt/live/siderbit.com/" ++ s
     settings <- loadYamlSettingsArgs
-        -- fall back to compile-time values, set to [] to require values at runtime
         [configSettingsYmlValue]
-
-        -- allow environment variables to override
         useEnv
-
-    -- Generate the foundation from the settings
     foundation <- makeFoundation settings
-
-    -- Generate a WAI Application from the foundation
     app <- makeApplication foundation
-
-    -- Run the application with Warp
-    runSettings (warpSettings foundation) app
+    runTLS
+        (tlsSettingsChain (cp "cert.pem") [cp "chain.pem"] (cp "privkey.pem"))
+        (warpSettings foundation)
+        app
 
 
 --------------------------------------------------------------
