@@ -50,7 +50,6 @@ getSitemapR = return $ TypedContent "text/plain"
 getHomeR :: Handler Html
 getHomeR = do 
     defaultLayout $ do 
-        addScript (StaticR js_gtag_js)
         setTitle "Eletrônica Universal"
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Sail|Roboto+Condensed:300,400,400i,700"
         addStylesheetRemote "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
@@ -61,6 +60,14 @@ getHomeR = do
             [hamlet|
             <meta charset="UTF-8">
             <script data-ad-client="ca-pub-4957039376509185" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+
+            <script async src = "https://www.googletagmanager.com/gtag/js?id=UA-153241659-1"> 
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-153241659-1'); 
+
             <meta name="google-site-verification" content="a7H32sTci5dQttMhgXtyAkX4yi75NJhvnaBCiXMwpHo">
             <meta name=keywords content="eletronica, hobby eletrônica, arduino">
             <meta name=description content="Fundamentos da Eletrônica Universal, suas ramificações, IOT e projetos.">
