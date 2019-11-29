@@ -72,7 +72,6 @@ getHomeR = do
             <meta name=keywords content="eletronica, hobby eletrônica, arduino">
             <meta name=description content="Fundamentos da Eletrônica Universal, suas ramificações, IOT e projetos.">
             <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">            
             <meta name="viewport" content="width=device-width, initial-scale=1">
             |]        
 
