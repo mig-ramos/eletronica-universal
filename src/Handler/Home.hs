@@ -43,6 +43,10 @@ getAdsR :: Handler TypedContent
 getAdsR = return $ TypedContent "text/plain"
     $ toContent $(embedFile "static/ads.txt")
 
+getSitemapR :: Handler TypedContent
+getSitemapR = return $ TypedContent "text/plain"
+    $ toContent $(embedFile "static/sitemap.xml")    
+
 getHomeR :: Handler Html
 getHomeR = do 
     defaultLayout $ do 

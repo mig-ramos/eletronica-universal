@@ -5,6 +5,7 @@
 
 /        HomeR  GET 
 /ads.txt AdsR   GET
+/sitemap.xml    SitemapR GET
 /assinante      AssinanteR GET
 
 /cadastro   CadastroR GET POST
