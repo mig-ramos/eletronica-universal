@@ -60,14 +60,6 @@ getHomeR = do
             [hamlet|
             <meta charset="UTF-8">
             <script data-ad-client="ca-pub-4957039376509185" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-
-            <script async src = "https://www.googletagmanager.com/gtag/js?id=UA-153241659-1"> 
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'UA-153241659-1'); 
-
             <meta name="google-site-verification" content="a7H32sTci5dQttMhgXtyAkX4yi75NJhvnaBCiXMwpHo">
             <meta name=keywords content="eletronica, hobby eletrônica, arduino">
             <meta name=description content="Fundamentos da Eletrônica Universal, suas ramificações, IOT e projetos.">
