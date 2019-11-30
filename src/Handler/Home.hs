@@ -55,6 +55,7 @@ getHomeR = do
         addStylesheetRemote "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_w3_css)
         addStylesheet (StaticR css_mystyle_css)
+        addScript(StaticR js_gtag_js)
    
         toWidgetHead
             [hamlet|
