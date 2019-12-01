@@ -48,7 +48,8 @@ getSitemapR = return $ TypedContent "text/plain"
     $ toContent $(embedFile "static/sitemap.xml")    
 
 getHomeR :: Handler Html
-getHomeR = do 
+getHomeR = do
+    sess <- lookupSession "_NOME" 
     defaultLayout $ do 
         setTitle "Eletrônica Universal"
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Sail|Roboto+Condensed:300,400,400i,700"
