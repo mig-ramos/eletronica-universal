@@ -49,7 +49,7 @@ getSitemapR = return $ TypedContent "text/plain"
 
 getHomeR :: Handler Html
 getHomeR = do
-    sess <- lookupSession "_NOME" 
+    -- sess <- lookupSession "_NOME" 
     defaultLayout $ do 
         setTitle "Eletrônica Universal"
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Sail|Roboto+Condensed:300,400,400i,700"
