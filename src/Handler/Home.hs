@@ -26,6 +26,7 @@ getAssinanteR = do
         toWidgetHead
             [hamlet|
             <meta charset="UTF-8">
+            <meta name="google-site-verification" content="a7H32sTci5dQttMhgXtyAkX4yi75NJhvnaBCiXMwpHo">
             <meta name=keywords content="eletronica, hobby eletrônica, arduino, projetos eletrônicos">
             <meta name=description content="Fundamentos da Eletrônica Universal, suas ramificações, IOT e projetos.">
             <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">
@@ -49,7 +50,7 @@ getSitemapR = return $ TypedContent "text/plain"
 
 getHomeR :: Handler Html
 getHomeR = do
-    -- sess <- lookupSession "_NOME" 
+    sess <- lookupSession "_NOME" 
     defaultLayout $ do 
         setTitle "Eletrônica Universal"
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Sail|Roboto+Condensed:300,400,400i,700"
@@ -61,7 +62,7 @@ getHomeR = do
         toWidgetHead
             [hamlet|
                 <meta charset="UTF-8">
-                <script data-ad-client="ca-pub-4957039376509185" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                -- <script data-ad-client="ca-pub-4957039376509185" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
                 <meta name="google-site-verification" content="a7H32sTci5dQttMhgXtyAkX4yi75NJhvnaBCiXMwpHo">
                 <meta name=keywords content="eletronica, hobby eletrônica, arduino">
                 <meta name=description content="Fundamentos da Eletrônica Universal, suas ramificações, IOT e projetos.">
