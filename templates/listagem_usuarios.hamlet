@@ -1,6 +1,6 @@
 <div class="w3-container">
-    <h1>Listagem de Usuários
-    <p>Listagem dos Usuários cadastrados no site.
+    <h1>Lista de Usuários
+    <p>Lista de Usuários cadastrados no site.
     <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
         <thead>
             <tr class="w3-blue">

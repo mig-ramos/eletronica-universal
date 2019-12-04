@@ -1,6 +1,6 @@
 <div class="w3-container">
-    <h1>TEMAS RELEVANTES
-    <p>Listagem dos Interesses dos Internautas
+    <h1>Temas preferidos dos Assinantes
+    <p>Lista de temas preferidos dos Assianantes
     <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
         <thead>
             <tr class="w3-blue">
@@ -9,7 +9,7 @@
                 <th>
                     EMAIL
                 <th>
-                    INTERESSE
+                    O QUE + INTERESSA
                 <th>
         <tbody>
             $forall Entity aid cadastro <- cadastros 
