@@ -4,8 +4,8 @@
             <a href="" title=""> <img title="" alt="" src="../static/img/logo.png">Eletrônica Universal
     <div class="w3-bar w3-blue">
         <a href=@{AdminR} class="w3-bar-item w3-button w3-hide-small" accesskey="1">Home
-        <a href=@{ListCadastroR} class="w3-bar-item w3-button w3-hide-small w3-green" accesskey="2">Interesse dos Assinantes
-        <a href=@{ListUsuarioR} class="w3-bar-item w3-button w3-hide-small" accesskey="3">Lista dos Usuários
+        <a href=@{ListCadastroR} class="w3-bar-item w3-button w3-hide-small" accesskey="2">Interesse dos Assinantes
+        <a href=@{ListUsuarioR} class="w3-bar-item w3-button w3-hide-small w3-green" accesskey="3">Lista dos Usuários
         <a href=@{SairR} class="w3-bar-item w3-button w3-hide-small w3-yellow" accesskey="4">FECHAR - Area Administrativa
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;
 

@@ -1,0 +1,26 @@
+<div class="w3-container">
+    <h1>Listagem de Usuários
+    <p>Listagem dos Usuários cadastrados no site.
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+        <thead>
+            <tr class="w3-blue">
+                <th>
+                    NOME
+                <th>
+                    EMAIL
+                <th>
+                    SENHA
+                <th>
+        <tbody>
+            $forall Entity aid usuario <- usuarios 
+                <tr>
+                    <td id=#{"nome" ++ show (fromSqlKey aid)}>
+                        #{usuarioNome usuario}
+                    <td>
+                        #{usuarioEmail usuario}
+                    <td>
+                        #{show $ usuarioSenha usuario}
+                    <td>
+                        <form method=post action=@{ApagarUsuarioR aid}>
+                            <button class="w3-red">
+                                X

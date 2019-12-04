@@ -32,11 +32,9 @@ getCadastroR = do
         toWidgetHead
             [hamlet|
             <meta charset="UTF-8">
-            <meta name="google-site-verification" content="a7H32sTci5dQttMhgXtyAkX4yi75NJhvnaBCiXMwpHo" />
             <meta name=keywords content="eletronica, hobby eletrônica, arduino">
             <meta name=description content="Cadastre qual sua área de interesse e fique ligado no lançamento">
-            <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">            
+            <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">         
             <meta name="viewport" content="width=device-width, initial-scale=1">
             |]
         toWidgetHead [lucius|
@@ -49,7 +47,6 @@ getCadastroR = do
         |]
         toWidget $(juliusFile "templates/mobile.julius")
         $(whamletFile "templates/cadastro_menu.hamlet")
-
 
         [whamlet|
             <div class="w3-container w3-center w3-margin-top">
@@ -87,7 +84,7 @@ postCadastroR = do
 getListCadastroR :: Handler Html 
 getListCadastroR = do 
     -- select * from cadastro order by cadastro.nome
-    cadastros <- runDB $ selectList [] [Asc CadastroNome]
+    cadastros <- runDB $ selectList [] [Asc CadastroInteresse]
     defaultLayout $ do
         setTitle "Eletrônica Universal - Interesses"
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Sail|Roboto+Condensed:300,400,400i,700"
@@ -97,8 +94,7 @@ getListCadastroR = do
         toWidgetHead
             [hamlet|
             <meta charset="UTF-8">
-            <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">            
+            <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">  
             <meta name="viewport" content="width=device-width, initial-scale=1">
             |]
         toWidgetHead [lucius|

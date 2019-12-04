@@ -24,7 +24,7 @@ getUsuarioR = do
     (widget,_) <- generateFormPost formUsu
     msg <- getMessage
     defaultLayout $ do
-        setTitle "Eletrônica Universal - Cadastro"
+        setTitle "Eletrônica Universal - Usuario"
         addStylesheetRemote "https://fonts.googleapis.com/css?family=Sail|Roboto+Condensed:300,400,400i,700"
         addStylesheetRemote "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_w3_css)
@@ -34,8 +34,7 @@ getUsuarioR = do
             <meta charset="UTF-8">
             <meta name=keywords content="eletronica, hobby eletrônica, arduino">
             <meta name=description content="Cadastre e fique ligado nos lançamentos">
-            <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">            
+            <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">          
             <meta name="viewport" content="width=device-width, initial-scale=1">
             |]
         toWidgetHead [lucius|
@@ -86,4 +85,39 @@ postUsuarioR = do
                 |]
                 redirect UsuarioR
         _ -> redirect HomeR
-        
+
+
+getListUsuarioR :: Handler Html 
+getListUsuarioR = do 
+    -- select * from cadastro order by cadastro.nome
+    usuarios <- runDB $ selectList [] [Asc UsuarioNome]
+    defaultLayout $ do
+        setTitle "Eletrônica Universal - Usuários"
+        addStylesheetRemote "https://fonts.googleapis.com/css?family=Sail|Roboto+Condensed:300,400,400i,700"
+        addStylesheetRemote "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        addStylesheet (StaticR css_w3_css)
+        addStylesheet (StaticR css_mystyle_css)
+        toWidgetHead
+            [hamlet|
+            <meta charset="UTF-8">
+            <meta name=author content="Miguel Arcanjo - Luiz Sorbello - Gustavo">           
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            |]
+        toWidgetHead [lucius|
+            h1 {
+                color : red;
+            }
+            form button {
+                margin: 10px;
+            }
+        |]
+        toWidget $(juliusFile "templates/mobile.julius") 
+        $(whamletFile "templates/usuarios_menu.hamlet")
+        $(whamletFile "templates/listagem_usuarios.hamlet")
+        $(whamletFile "templates/rodape.hamlet")
+
+postApagarUsuarioR :: UsuarioId -> Handler Html 
+postApagarUsuarioR aid = do 
+    _ <- runDB $ get404 aid
+    runDB $ delete aid 
+    redirect ListUsuarioR

@@ -13,6 +13,8 @@
 /cadastro/#CadastroId/apagar    ApagarCadastroR POST
 
 /cadastrar UsuarioR GET POST
+/listusuario   ListUsuarioR GET
+/usuario/#UsuarioId/apagar  ApagarUsuarioR  POST
 /entrar    EntrarR  GET POST
 /sair      SairR    GET
 /admin     AdminR   GET
