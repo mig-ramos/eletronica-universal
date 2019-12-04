@@ -12,5 +12,5 @@
     <div id="demo" class="w3-bar-block w3-blue-grey w3-hide w3-hide-large w3-hide-medium">
         <a href=@{AdminR} class="w3-bar-item w3-button ">Home
         <a href=@{ListCadastroR} class="w3-bar-item w3-button">Interesse dos Assinantes
-         <a href=@{ListUsuarioR} class="w3-bar-item w3-button">Lista dos Usuários
+        <a href=@{ListUsuarioR} class="w3-bar-item w3-button">Lista dos Usuários
         <a href=@{SairR} class="w3-bar-item w3-button ">FECHAR - Area Administrativa
