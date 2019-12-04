@@ -3,13 +3,13 @@
         <p class="w3-xxlarge w3-center w3-text-write">
             <a href="" title=""> <img title="" alt="" src="../static/img/logo.png">Eletrônica Universal
     <div class="w3-bar w3-blue">
-        <a href=@{HomeR} class="w3-bar-item w3-button w3-hide-small" accesskey="1">Home
-        <a href="#tema" class="w3-bar-item w3-button w3-hide-small" accesskey="2">Tema
-        <a href="#categorias" class="w3-bar-item w3-button w3-hide-small" accesskey="3">Categorias
-        <a href="#sobrenos" class="w3-bar-item w3-button w3-hide-small" accesskey="4">Sobre nós
-        <a href="#contato" class="w3-bar-item w3-button w3-hide-small" accesskey="5">Contato
-        <a href=@{UsuarioR} class="w3-bar-item w3-button w3-hide-small w3-green" accesskey="6">Assine a Revista!
-        <a href=@{EntrarR} class="w3-bar-item w3-button w3-hide-small w3-yellow" accesskey="7">Sou Assinante!
+        <a href=@{HomeR} class="w3-bar-item w3-button w3-hide-small" title="Página Inicial" accesskey="1">Home
+        <a href="#tema" class="w3-bar-item w3-button w3-hide-small" title="Tema Principal" accesskey="2">Tema
+        <a href="#categorias" class="w3-bar-item w3-button w3-hide-small" title="Categorias do Site" accesskey="3">Categorias
+        <a href="#sobrenos" class="w3-bar-item w3-button w3-hide-small" title="Integrantes da Equipe" accesskey="4">Sobre nós
+        <a href="#contato" class="w3-bar-item w3-button w3-hide-small" title="Entrar em Contato" accesskey="5">Contato
+        <a href=@{UsuarioR} class="w3-bar-item w3-button w3-hide-small w3-green" title="Cadastrar no Site" accesskey="6">Assine a Revista!
+        <a href=@{EntrarR} class="w3-bar-item w3-button w3-hide-small w3-yellow" title="Entrar já sou Assinante" accesskey="7">Sou Assinante!
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;
 
     <div id="demo" class="w3-bar-block w3-blue-grey w3-hide w3-hide-large w3-hide-medium">
